@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <h:outputStylesheet>
+        .gray-background{
+            border-color: black;
+            border-width: 1px;
+            margin-top: 10px;
+            background-color: cornflowerblue;
+        }
+        .ui-widget{
+            font-size: 12px;
+        }
+    </h:outputStylesheet>
+</h:head>
+<h:body>
+
+    <p:layout fullPage="true">
+        <p:layoutUnit position="center" style="height: 100%;">
+            <h:form>
+                <div class="ui-g">
+                    <div class="ui-g-12 gray-background">title</div>
+                    <div class="ui-g-12 ui-g-nopad">
+                        <div class="ui-g-12 ui-md-2 gray-background">left menu</div>
+                        <div class="ui-g-12 ui-md-10 ui-g-nopad">
+                            <!--<div class="ui-g">-->
+                                <!--<div class="ui-g-6 ui-md-3 gray-background"><p:graphicImage name="demo/images/nature/nature1.jpg"-->
+                                                                            <!--style="width:100%"/></div>-->
+                                <!--<div class="ui-g-6 ui-md-3 gray-background"><p:graphicImage name="demo/images/nature/nature2.jpg"-->
+                                                                            <!--style="width:100%"/></div>-->
+                                <!--<div class="ui-g-6 ui-md-3 gray-background"><p:graphicImage name="demo/images/nature/nature3.jpg"-->
+                                                                            <!--style="width:100%"/></div>-->
+                                <!--<div class="ui-g-6 ui-md-3 gray-background"><p:graphicImage name="demo/images/nature/nature4.jpg"-->
+                                                                            <!--style="width:100%"/></div>-->
+                            <!--</div>-->
+
+                            <p:dataGrid var="store" value="#{storeGridView.storeModelList}" columns="4" layout="grid"
+                             rows="12" paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                        rowsPerPageTemplate = "6,12,16" paginatorPosition="bottom" >
+                                <p:panel style="text-align:center;">
+                                    <f:facet name="header">
+                                        <h:outputText value="#{store.name}"/>
+                                        <p:commandButton style="float: right;" value="展开"/>
+                                    </f:facet>
+                                    <p:panelGrid style="text-align: left; width: 100%;">
+                                        <p:row>
+                                            <p:column colspan="2">
+                                                <h:panelGroup>
+                                                    <p:graphicImage value="xx.jpg"/>
+                                                    <h:outputText value="#{store.storeRate}"/>
+                                                </h:panelGroup>
+                                            </p:column>
+                                        </p:row>
+                                        <p:row>
+                                            <p:column style="width: 50%">
+                                                <p:graphicImage value="xx.jpg"/>
+                                                <h:outputText value="#{store.docRate}"/>
+                                            </p:column>
+                                            <p:column style="width: 50%">
+                                                <p:graphicImage value="xx.jpg"/>
+                                                <h:outputText value="#{store.count}"/>
+                                            </p:column>
+                                        </p:row>
+                                        <p:row>
+                                            <p:column colspan="2">
+                                                <p:panelMenu style="width:100%;">
+                                                    <p:submenu label="展开">
+                                                        <p:menuitem value="查看包含的药店" icon="ui-icon-disk"/>
+                                                        <p:menuitem value="查看医生分组" icon="ui-icon-arrowrefresh-1-w"/>
+                                                        <p:menuitem value="查看分配的医生" icon="ui-icon-arrowrefresh-1-w"/>
+                                                    </p:submenu>
+                                                </p:panelMenu>
+                                            </p:column>
+                                        </p:row>
+                                        <!--<p:row>-->
+                                            <!--<p:column>-->
+
+                                            <!--</p:column>-->
+                                        <!--</p:row>-->
+                                    </p:panelGrid>
+                                </p:panel>
+                            </p:dataGrid>
+                        </div>
+                    </div>
+                    <div class="ui-g-12 gray-background">
+                        Footer
+                    </div>
+                </div>
+            </h:form>
+        </p:layoutUnit>
+    </p:layout>
+</h:body>
+</html>

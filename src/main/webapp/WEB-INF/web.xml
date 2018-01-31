@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         xmlns:b="http://www.springframework.org/schema/beans"
+         version="3.0">
+
+    <display-name>imp</display-name>
+    <description>微问诊管理平台（Integrated Management Platform）</description>
+
+    <welcome-file-list>
+        <welcome-file>index.xhtml</welcome-file>
+    </welcome-file-list>
+
+    <!-- 路径以及开发配置 这里有些配置不是必须的，但是路径一定要配置准确，如默认我们都是把applicationContext.xml文件写在web-root目录下，但是有些情况下不这样写会更好，所以使用路径配置 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:spring.xml</param-value>
+    </context-param>
+    <!-- Spring 使用Spring时必须加载的监听器-->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
+    <!-- Faces Servlet 对文件使用jsf的方式解析文件 -->
+    <servlet>
+        <servlet-name>FacesServlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FacesServlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>primefaces.THEME</param-name>
+        <param-value>omega</param-value>
+    </context-param>
+</web-app>
