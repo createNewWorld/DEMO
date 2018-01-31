@@ -1,10 +1,9 @@
-package com.fortis.demo;
+package com.fortis.doctormonitor;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 
 /**
  * Created by ft on 2018/1/16.
@@ -13,7 +12,7 @@ import org.springframework.stereotype.Component;
 //@Component
 public class ActionAspect {
 
-    @Pointcut("@annotation(com.fortis.demo.CheckAction)")
+    @Pointcut("@annotation(com.fortis.doctormonitor.CheckAction)")
     public void anyMethod(){}
 
     @Around("anyMethod()")

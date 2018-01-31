@@ -12,16 +12,16 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd http://www.springfram
 
     <!--扫描子包下面的文件 ,扫描service-->
 
-    <context:component-scan base-package="com.fortis.demo"/>
+    <context:component-scan base-package="com.fortis.doctormonitor"/>
     <context:annotation-config/>
 
     <aop:aspectj-autoproxy proxy-target-class="true"/>
-    <bean id="demo" class="com.fortis.demo.ActionAspect"/>
+    <bean id="demo" class="com.fortis.doctormonitor.ActionAspect"/>
 
-    <!--<bean id="aroundInterceptor" class="com.fortis.demo.AroundAdvice"/>-->
+    <!--<bean id="aroundInterceptor" class="com.fortis.doctormonitorormonitor.AroundAdvice"/>-->
 
     <!--<aop:config proxy-target-class="false">-->
-        <!--<aop:pointcut id="myInterceptor" expression="execution(* com.fortis.demo.DemoServiceImpl.*(..))"/>-->
+        <!--<aop:pointcut id="myInterceptor" expression="execution(* com.fortis.doctormonitorormonitor.DemoServiceImpl.*(..))"/>-->
         <!--<aop:advisor advice-ref="aroundInterceptor" pointcut-ref="myInterceptor" order="1"/>-->
     <!--</aop:config>-->
 

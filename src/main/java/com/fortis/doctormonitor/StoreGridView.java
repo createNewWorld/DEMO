@@ -1,4 +1,4 @@
-package com.fortis.demo;
+package com.fortis.doctormonitor;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;

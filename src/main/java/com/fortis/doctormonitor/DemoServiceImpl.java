@@ -1,4 +1,4 @@
-package com.fortis.demo;
+package com.fortis.doctormonitor;
 
 import org.springframework.stereotype.Service;
 

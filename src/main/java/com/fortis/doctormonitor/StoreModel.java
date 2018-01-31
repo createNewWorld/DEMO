@@ -1,6 +1,4 @@
-package com.fortis.demo;
-
-import java.io.Serializable;
+package com.fortis.doctormonitor;
 
 /**
  * Created by ft on 2018/1/29.

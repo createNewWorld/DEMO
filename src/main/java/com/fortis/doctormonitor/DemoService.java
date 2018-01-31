@@ -1,4 +1,4 @@
-package com.fortis.demo;
+package com.fortis.doctormonitor;
 
 /**
  * Created by ft on 2018/1/16.

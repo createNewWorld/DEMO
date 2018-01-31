@@ -1,4 +1,4 @@
-package com.fortis.demo;
+package com.fortis.doctormonitor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
